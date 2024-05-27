@@ -13,3 +13,6 @@ urlpatterns += [
     path('allbooks/', views.AllLoanedBooksListView.as_view(), name='all-borrowed'),
     path('accounts/logout/', views.custom_logout_view, name='logout'),
 ]
+urlpatterns += [
+    path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
+]
